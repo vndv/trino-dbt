@@ -1,0 +1,38 @@
+[sqlfluff]
+dialect = trino
+templater = dbt
+exclude_rules = L031, L034, RF02
+large_file_skip_byte_limit = 0
+max_line_length = 140
+warnings = LT05
+
+[sqlfluff:templater:dbt]
+project_dir = ./
+
+[sqlfluff:indentation]
+tab_space_size = 2
+allow_implicit_indents = true
+
+[sqlfluff:layout:type:start_bracket]
+spacing_within = touch
+
+[sqlfluff:layout:type:end_bracket]
+spacing_within = touch
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+
+[sqlfluff:rules:references.keywords]
+ignore_words = name
+
+[sqlfluff:rules:capitalisation.functions]
+capitalisation_policy = upper
+
+[sqlfluff:rules:capitalisation.literals]
+# Null & Boolean Literals
+capitalisation_policy = upper
+
+[sqlfluff:rules:references.special_chars]
+# Special Characters in Identifiers
+allow_space_in_identifier = True
+additional_allowed_characters = ['.','(',')','-']

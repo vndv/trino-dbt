@@ -1,0 +1,19 @@
+---
+version: 2
+
+sources:
+  - name: source_api_data
+    database: iceberg
+    schema: api_data
+    tables:
+      - name: customers
+      - name: items
+      - name: orders
+      - name: products
+      - name: stores
+      - name: supplies
+  - name: remote_gp
+    database: example
+    schema: public
+    tables:
+      - name: orders
