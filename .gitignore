@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# DBT
+dbt_packages/
+logs/
+target/
+.user.yml
+profiles.yml
+
+# Project specific
+*.lock
+.env
+.env.* 
