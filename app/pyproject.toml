@@ -1,0 +1,16 @@
+[project]
+name = "trino-dbt"
+version = "0.1.0"
+description = "Trino DBT project"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pyiceberg[hive,s3fs]>=0.9.1",
+    "python-dotenv",
+    "pydantic-settings",
+    "requests>=2.32.4",
+    "pyarrow>=20.0.0",
+    "pandas>=2.3.0",
+    "ruff>=0.12.2",
+]
+
