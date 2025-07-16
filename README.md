@@ -21,8 +21,8 @@ This project demonstrates working with Trino, Apache Iceberg, and DBT to build a
 ### 1. Environment Setup
 ```bash
 # Clone repository
-git clone <repo-url>
-cd <repo-name>
+git clone git@github.com:vndv/trino-dbt.git 
+cd trino-dbt
 
 # Start infrastructure
 docker-compose up -d
