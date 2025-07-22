@@ -7,15 +7,6 @@ services:
       - ./trino-etc:/usr/lib/trino/etc:ro
       - ./trino-etc/catalog:/etc/trino/catalog
 
-  postgres:
-    ports:
-      - "5432:5432"
-    image: postgres:11
-    container_name: postgres
-    environment:
-      POSTGRES_USER: trino
-      POSTGRES_PASSWORD: trino
-
   metastore_db:
     image: postgres:11
     hostname: metastore_db
@@ -92,10 +83,6 @@ services:
     volumes:
         - ./postgres:/docker-entrypoint-initdb.d
         - postgresdb:/var/lib/postgresql/data
-    command: >
-      -c wal_level=logical
-      -c max_wal_senders=1
-      -c max_replication_slots=1
 
 volumes:
   postgresdb:
