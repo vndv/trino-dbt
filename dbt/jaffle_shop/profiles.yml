@@ -1,0 +1,13 @@
+jaffle_shop:
+  outputs:
+    dev:
+      type: trino
+      user: trino 
+      password: <password-goes-here>
+      host: http://localhost 
+      port: 8080
+      catalog: iceberg 
+      schema: api_data 
+      threads: 1
+      http_scheme: https
+  target: dev
