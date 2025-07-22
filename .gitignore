@@ -31,4 +31,3 @@ target/
 # Project specific
 *.lock
 .env
-.env.* 
